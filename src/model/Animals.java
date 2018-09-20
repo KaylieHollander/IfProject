@@ -3,19 +3,37 @@ package model;
 public class Animals
 {
 
-	private int elephants;
+	private boolean elephants;
 	private double zebras;
 	private int llamas;
+	private double dragons;
 	
-	public Animals (int elephants, double zebras, int llamas)
+	/**
+	 * Default constructor or after the fact customization
+	 * AKA I don't know the info yet about the Animals
+	 */
+	public Animals()
+	{
+		
+	}
+	
+	/**
+	 * Better constructor when I know the information for the animal object
+	 * @param elephants
+	 * @param zebras
+	 * @param llamas
+	 * @param dragons
+	 */
+	public Animals (boolean elephants, double zebras, int llamas, double dragons)
 	{
 		this.elephants = elephants;
 		this.zebras = zebras;
 		this.llamas = llamas;
+		this.dragons = dragons;
 	}
 	
 //	getters
-	public int getelephants()
+	public boolean getelephants()
 	{
 		return elephants;
 	}
@@ -28,6 +46,11 @@ public class Animals
 	public int getllamas()
 	{
 		return llamas;
+	}
+	
+	public double getdragons()
+	{
+		return dragons;
 	}
 	
 //	setters
@@ -44,6 +67,11 @@ public class Animals
 	public void setllamas()
 	{
 		this.llamas = llamas;
+	}
+	
+	public void setdragons()
+	{
+		this.dragons = dragons;
 	}
 	
 	
