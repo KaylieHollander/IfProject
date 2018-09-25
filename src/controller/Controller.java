@@ -55,8 +55,62 @@ public class Controller
 			
 		}
 		
+		for (int loop = 0; loop <30; loop += 2)
+		{
+			JOptionPane.showMessageDialog(null, "The loop value is:" + loop);
+		}
+		
+		
+		
+		
+		
 	}
 		
+	private void askUser()
+	{
+		String response = JOptionPane.showInputDialog(null, "How many llamas?");
+		
+		while (!validDouble(response))
+		{
+			response = JOptionPane.showInputDialog(null, "Wrong number of llamas");
+		}
+		
+	}
+	
+	public boolean validDouble(String maybeDouble)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Double.parseDouble(maybeDouble);
+			isValid = true;
+		}
+		catch(NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "This requires a double value >)");
+		}
+		
+		return isValid;
+	}
+	
+	public boolean validInt(String maybeInt)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Integer.parseInt(maybeInt);
+			isValid = true;
+		}
+		catch(NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "You should type in a number");
+		}
+		
+		return isValid;
+	}
 
+	
 	
 }
