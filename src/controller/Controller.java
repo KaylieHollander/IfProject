@@ -75,7 +75,7 @@ public class Controller
 		
 		
 		String response = JOptionPane.showInputDialog(null, "How many llamas?");
-		while (!validDouble(response))
+		while (response != null && !validDouble(response))
 		{
 			response = JOptionPane.showInputDialog(null, "Wrong number of llamas");
 		}
@@ -85,7 +85,11 @@ public class Controller
 		
 		JOptionPane.showMessageDialog(null, llamas);
 		
-		
+		response = JOptionPane.showInputDialog(null, "how many llamas?");
+		if (response.equalsIgnoreCase("Ten"))
+		{
+			JOptionPane.showMessageDialog(null, "You either pressed cancel, the x, or typed nothing");
+		}
 		
 	}
 	
