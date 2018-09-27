@@ -1,6 +1,8 @@
 package model;
 
-public class Animals
+
+
+public class Thing
 {
 // Declaration section
 //	Data member section
@@ -12,7 +14,7 @@ public class Animals
 	
 	private boolean elephants;
 	private double zebras;
-	private int llamas;
+	private double llamas;
 	private double dragons;
 	
 	/**
@@ -20,12 +22,9 @@ public class Animals
 	 * AKA I don't know the info yet about the Animals.
 	 * Initializing data members with "bad" values to be changed.
 	 */
-	public Animals()
+	public Thing()
 	{
-		this.elephants = true;
-		this.zebras = 99000;
-		this.llamas = 5;
-		this.dragons = 88;
+		
 	}
 	
 	/**
@@ -35,7 +34,7 @@ public class Animals
 	 * @param llamas
 	 * @param dragons
 	 */
-	public Animals (boolean elephants, double zebras, int llamas, double dragons)
+	public Thing (boolean elephants, double zebras, double llamas, double dragons)
 	{
 		this.elephants = elephants;
 		this.zebras = zebras;
@@ -54,7 +53,7 @@ public class Animals
 		return zebras;
 	}
 	
-	public int getllamas()
+	public double getllamas()
 	{
 		return llamas;
 	}
@@ -75,7 +74,7 @@ public class Animals
 		this.zebras = zebras;
 	}
 	
-	public void setllamas(int llamas)
+	public void setllamas(double llamas)
 	{
 		this.llamas = llamas;
 	}
@@ -85,5 +84,11 @@ public class Animals
 		this.dragons = dragons;
 	}
 	
+	public String toString()
+	{
+		String description = "You answered" + llamas ;
+		
+		return description;
+	}
 	
 }

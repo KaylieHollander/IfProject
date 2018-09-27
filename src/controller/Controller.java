@@ -2,8 +2,7 @@ package controller;
 
 // Import section
 import javax.swing.JOptionPane;
-import model.Animals;
-
+import model.Thing;
 
 public class Controller
 {
@@ -23,57 +22,70 @@ public class Controller
 	public void start()
 	{
 		loops();
+		askUser();
 	}
 	
 	
 	private void loops()
 	{
-		boolean isDone = false;
-		boolean isLlama = false;
-		int countDone = 0;
-		int countLlama = 0;
-		
-		while (!isDone)//test the variable
-		{
-			JOptionPane.showMessageDialog(null, "Dragon");
-//			Eventually change the loop variable
-			countDone++;
-			if (countDone >= 10)
-			{
-				isDone = true;	// update variable
-			}
+//		boolean isDone = false;
+//		boolean isLlama = false;
+//		int countDone = 0;
+//		int countLlama = 0;
+//		
+//		while (!isDone)//test the variable
+//		{
+//			JOptionPane.showMessageDialog(null, "Dragon");
+////			Eventually change the loop variable
+//			countDone++;
+//			if (countDone >= 10)
+//			{
+//				isDone = true;	// update variable
+//			}
+//		}
+//		
+//		while (!isLlama)
+//		{
+//			JOptionPane.showMessageDialog(null, "Llama");
+//			countLlama++;
+//			if (countLlama >=15)
+//			{
+//				isLlama = true;
+//			}
+//			
 		}
 		
-		while (!isLlama)
-		{
-			JOptionPane.showMessageDialog(null, "Llama");
-			countLlama++;
-			if (countLlama >=15)
-			{
-				isLlama = true;
-			}
-			
-		}
-		
-		for (int loop = 0; loop <30; loop += 2)
-		{
-			JOptionPane.showMessageDialog(null, "The loop value is:" + loop);
-		}
+//		for (int loop = 30; loop >=0; loop -= 2)
+//		{
+//			Thing llamas = new Thing();
+//			
+//			JOptionPane.showMessageDialog(null, "The number of llamas is:" + llamas);
+//		}
 		
 		
 		
 		
 		
-	}
+//	}
 		
 	private void askUser()
 	{
-		String response = JOptionPane.showInputDialog(null, "How many llamas?");
 		
+		Thing llamas = new Thing();
+		
+		
+		String response = JOptionPane.showInputDialog(null, "How many llamas?");
 		while (!validDouble(response))
 		{
 			response = JOptionPane.showInputDialog(null, "Wrong number of llamas");
 		}
+		
+//		assign and convert
+		llamas.setllamas(Double.parseDouble(response));
+		
+		JOptionPane.showMessageDialog(null, llamas);
+		
+		
 		
 	}
 	
@@ -111,6 +123,5 @@ public class Controller
 		return isValid;
 	}
 
-	
 	
 }
