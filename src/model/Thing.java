@@ -12,10 +12,10 @@ public class Thing
 //	Booleans => false
 //	Objects => null
 	
-	private boolean elephants;
-	private double zebras;
-	private double llamas;
-	private double dragons;
+	private double jupiter;
+	private double venus;
+	private double mars;
+	private double neptune;
 	
 	/**
 	 * Default constructor or after the fact customization.
@@ -29,64 +29,66 @@ public class Thing
 	
 	/**
 	 * Better constructor when I know the information for the animal object.
-	 * @param elephants
-	 * @param zebras
-	 * @param llamas
-	 * @param dragons
+	 * @param jupiter
+	 * @param venus
+	 * @param mars
+	 * @param neptune
 	 */
-	public Thing (boolean elephants, double zebras, double llamas, double dragons)
+	public Thing (double jupiter, double venus, double mars, double neptune)
 	{
-		this.elephants = elephants;
-		this.zebras = zebras;
-		this.llamas = llamas;
-		this.dragons = dragons;
+		this.jupiter = jupiter;
+		this.venus = venus;
+		this.mars = mars;
+		this.neptune = neptune;
 	}
 	
 //	getters
-	public boolean getelephants()
+	public double getjupiter()
 	{
-		return elephants;
+		return jupiter;
 	}
 	
-	public double getzebras()
+	public double getvenus()
 	{
-		return zebras;
+		return venus;
 	}
 	
-	public double getllamas()
+	public double getmars()
 	{
-		return llamas;
+		return mars;
 	}
 	
-	public double getdragons()
+	public double getneptune()
 	{
-		return dragons;
+		return neptune;
 	}
 	
 //	setters
-	public void setelephants(boolean elephants)
+	public void setjupiter(double jupiter)
 	{
-		this.elephants = elephants;
+		this.jupiter = jupiter;
 	}
 	
-	public void setzebras(double zebras)
+	public void setvenus(double venus)
 	{
-		this.zebras = zebras;
+		this.venus = venus;
 	}
 	
-	public void setllamas(double llamas)
+	public void setmars(double mars)
 	{
-		this.llamas = llamas;
+		this.mars = mars;
 	}
 	
-	public void setdragons(double dragons)
+	public void setneptune(double neptune)
 	{
-		this.dragons = dragons;
+		this.neptune = neptune;
 	}
 	
 	public String toString()
 	{
-		String description = "You answered" + llamas ;
+		String description = "You answered" + mars ;
+		
+		description = "You answered" + jupiter ;
 		
 		return description;
 	}

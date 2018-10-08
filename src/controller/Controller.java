@@ -3,6 +3,7 @@ package controller;
 // Import section
 import javax.swing.JOptionPane;
 import model.Thing;
+import java.util.ArrayList;
 
 public class Controller
 {
@@ -23,6 +24,7 @@ public class Controller
 	{
 		loops();
 		askUser();
+		lotsOfPlanets();
 	}
 	
 	
@@ -57,9 +59,9 @@ public class Controller
 		
 //		for (int loop = 30; loop >=0; loop -= 2)
 //		{
-//			Thing llamas = new Thing();
+//			Thing mars = new Thing();
 //			
-//			JOptionPane.showMessageDialog(null, "The number of llamas is:" + llamas);
+//			JOptionPane.showMessageDialog(null, "The number of mars is:" + mars);
 //		}
 		
 		
@@ -67,30 +69,101 @@ public class Controller
 		
 		
 //	}
+	
+	private void lotsOfPlanets()
+	{
+//		Local variables are only visible in the method they are defined in.
+//		They only have SCOPE to that method
+		
+		ArrayList<Thing> myPlanets = new ArrayList<Thing>();
+		
+	
+//		Have to use a wrapper class to hold a primitive in a list
+//		Must be capitalized
+		
+		
+		Thing samplePlanet = new Thing();
+		Thing otherPlanet = new Thing();
+		
+		myPlanets.add(samplePlanet);
+		myPlanets.add(samplePlanet);
+		myPlanets.add(otherPlanet);
+		
+		for(int index = 0; index < myPlanets.size(); index +=1)
+		{
+//			Good for display, or minor changes
+			JOptionPane.showMessageDialog(null, myPlanets.get(index).getmars());
+			
+			Thing currentPlanet = myPlanets.get(index);
+			currentPlanet.setmars(index * currentPlanet.getmars());
+		}
+		for (Thing current : myPlanets)
+		{
+			JOptionPane.showMessageDialog(null, "The planet is named" + current.getmars());
+		}
+		
+	}
+
+	private void planetLists()
+	{
+		ArrayList<Integer> mySpace = new ArrayList<Integer>();
+		
+		Thing sampleSpace = new Thing();
+		
+		mySpace.add(sampleSpace);
+		
+		
+	}
+	
 		
 	private void askUser()
 	{
 		
-		Thing llamas = new Thing();
+		Thing mars = new Thing();
+//		Thing jupiter = new Thing();
 		
 		
-		String response = JOptionPane.showInputDialog(null, "How many llamas?");
-		while (response != null && !validDouble(response))
+		String response = JOptionPane.showInputDialog(null, "How many miles away is mars?");
+		while (response == null || !validDouble(response))
 		{
-			response = JOptionPane.showInputDialog(null, "Wrong number of llamas");
+			response = JOptionPane.showInputDialog(null, "Wrong number of miles");
 		}
 		
 //		assign and convert
-		llamas.setllamas(Double.parseDouble(response));
+		mars.setmars(Double.parseDouble(response));
 		
-		JOptionPane.showMessageDialog(null, llamas);
+		JOptionPane.showMessageDialog(null, mars);
 		
-		response = JOptionPane.showInputDialog(null, "how many llamas?");
-		if (response.equalsIgnoreCase("Ten"))
+//		response = JOptionPane.showInputDialog(null, "How many miles away is mars?");
+//		if (response.equals("10"))
+//		{
+//			JOptionPane.showMessageDialog(null, "Wrong number of miles");
+//		}
+		
+		
+		while (Integer.parseInt(response) != 10000)
 		{
-			JOptionPane.showMessageDialog(null, "You either pressed cancel, the x, or typed nothing");
+			response = JOptionPane.showInputDialog(null, "How many miles away is mars?");
 		}
 		
+		
+//		String jupiterresponse = JOptionPane.showInputDialog(null, "What is the meaning of Jupiter?");
+//		
+//		jupiter.setjupiter(Double.parseDouble(response));
+//		
+//		JOptionPane.showMessageDialog(null, jupiter);
+//		
+//		while (jupiterresponse == null || !validDouble(jupiterresponse))
+//		{
+//			jupiterresponse = JOptionPane.showInputDialog(null, "Wrong meaning");
+//		}
+//		
+//		
+//		while (jupiterresponse != "blue")
+//		{
+//			jupiterresponse = JOptionPane.showInputDialog(null, "What is the meaning of Jupiter?");
+//		}
+//		
 	}
 	
 	public boolean validDouble(String maybeDouble)
@@ -104,7 +177,7 @@ public class Controller
 		}
 		catch(NumberFormatException error)
 		{
-			JOptionPane.showMessageDialog(null, "This requires a double value >)");
+			JOptionPane.showMessageDialog(null, "This requires a double value");
 		}
 		
 		return isValid;
