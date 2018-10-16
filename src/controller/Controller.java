@@ -74,7 +74,9 @@ public class Controller
 	{
 //		Local variables are only visible in the method they are defined in.
 //		They only have SCOPE to that method
-		
+		/**
+		 * This is creating the list and setting its name to myPlanets
+		 */
 		ArrayList<Thing> myPlanets = new ArrayList<Thing>();
 		
 	
@@ -85,10 +87,17 @@ public class Controller
 		Thing samplePlanet = new Thing();
 		Thing otherPlanet = new Thing();
 		
+		/** 
+		 * This is adding more things to the list of sample planet
+		 */
 		myPlanets.add(samplePlanet);
 		myPlanets.add(samplePlanet);
 		myPlanets.add(otherPlanet);
 		
+		/**
+		 * This is saying that the number starts at 0 and while the planet size 
+		 * is greater than 0 it will show the value of mars and then set it to equal the index value
+		 */
 		for(int index = 0; index < myPlanets.size(); index +=1)
 		{
 //			Good for display, or minor changes
@@ -106,11 +115,14 @@ public class Controller
 
 	private void planetLists()
 	{
-		ArrayList<Integer> mySpace = new ArrayList<Integer>();
+		ArrayList<Thing> mySpace = new ArrayList<Thing>();
 		
-		Thing sampleSpace = new Thing();
+		Thing asteriod = new Thing();
+		Thing stars = new Thing();
 		
-		mySpace.add(sampleSpace);
+		mySpace.add(asteriod);
+		mySpace.add(stars);
+		
 		
 		
 	}
